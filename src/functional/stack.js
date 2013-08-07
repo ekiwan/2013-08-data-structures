@@ -12,10 +12,7 @@ var makeStack = function(){
   };
 
   stack.pop = function(){
-    size--;
-    if(size<0) {
-      size = 0;
-    }
+    size && size--;
   };
 
   stack.size = function(){
