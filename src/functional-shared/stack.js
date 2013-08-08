@@ -2,11 +2,8 @@ var makeStack = function(){
 // Use an object with numeric keys to store values
 // Implement the methods below
   var stack = {};
-
   stack.storage = {};
-
   stack.stackSize=0;
-
   _.extend(stack, makeStack.stackMethods);
 
   return stack;
