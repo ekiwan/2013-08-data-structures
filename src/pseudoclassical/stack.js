@@ -4,8 +4,6 @@ var Stack = function() {
   this.stackSize=0;
 };
 
-Stack.stackMethods = {};
-
 Stack.prototype.push = function(value){
     this.storage[this.stackSize] = value;
     this.stackSize++;
