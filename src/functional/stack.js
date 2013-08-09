@@ -14,7 +14,7 @@ var makeStack = function(){
   };
 
   stack.pop = function(){
-    popped = storage[size-1];
+    var popped = storage[size-1];
     delete storage[size];
     size && size--;
     return popped;

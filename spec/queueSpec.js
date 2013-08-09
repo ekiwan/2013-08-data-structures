@@ -44,7 +44,6 @@ describe("queue", function() {
 
   it('should dequeue items in the FIFO order', function() {
     var a = 'a', b = 'b', c = 'c', d = 'd';
-
     queue.enqueue(a);
     queue.enqueue(b);
     queue.enqueue(c);
