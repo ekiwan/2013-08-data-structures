@@ -11,16 +11,15 @@ var makeQueue = function(){
     for (var i = size; i > 0; i--){
       storage[i] = storage[i-1];
     }
-    storage[0] = value;
     size++;
+    storage[0] = value;
   };
 
   queue.dequeue = function(){
-   var ind = String(size-1);
-   var dequeued = storage[ind];
-   delete storage[ind];
+   var front = storage[size-1];
+   delete storage[size-1];
    size && size--;
-   return dequeued;
+   return front;
   };
 
   queue.size = function(){
