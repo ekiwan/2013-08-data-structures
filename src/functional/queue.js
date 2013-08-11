@@ -8,22 +8,12 @@ var makeQueue = function(){
   var queue = {};
 
   queue.enqueue = function(value){
-    for (var i = size; i > 0; i--) {
-      storage[i] = storage[i - 1];
-    }
-    storage[0] = value;
-    size++;
   };
 
   queue.dequeue = function(){
-    var front = storage[size - 1];
-    delete front;
-    size && size--;
-    return front;
   };
 
   queue.size = function(){
-    return size;
   };
 
   return queue;
