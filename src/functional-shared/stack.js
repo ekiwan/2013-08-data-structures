@@ -1,22 +1,26 @@
 var makeStack = function(){
-  var storage = {};
-  var size=0; 
   var stack = {};
+  stack.storage = {};
+  stack.stackSize=0;
+  _(stack).extend(stackMethods);
+  return stack; 
+ }; 
   
+stackMethods = {};
 
-  stack.push = function(value){
-    storage[size] = value;
-    size++;
-  };
+stackMethods.push = function(value){
+  this.storage[this.stackSize] = value;
+  this.stackSize++;
+};
 
-  stack.pop = function(){
-  var popped = storage[size - 1];
-  delete storage[size - 1];
-  size && size--;
-  return popped;
-  };
+stackMethods.pop = function(){
+var popped = this.storage[this.stackSize - 1];
+delete this.storage[this.stackSize - 1];
+this.stackSize && this.stackSize--;
+return popped;
+};
 
-  stack.size = function(){
-    return size;
-  };
+stackMethods.size = function(){
+  return this.stackSize;
+};
 
