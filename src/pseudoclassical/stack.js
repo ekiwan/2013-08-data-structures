@@ -17,7 +17,7 @@ return popped;
 };
 
 Stack.prototype.size = function(){
-  return size;
+  return this.stackSize;
 };
 
 

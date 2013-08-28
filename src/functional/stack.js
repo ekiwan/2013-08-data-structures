@@ -19,4 +19,6 @@ var makeStack = function(){
   stack.size = function(){
     return size;
   };
+  return stack;
+};
 
